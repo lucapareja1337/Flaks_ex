@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Minhas Tarefas</h2>
+
+    <ul>
+        {% for tarefa in tarefas %}
+            <li>{{ tarefa.descricao }}<a class="btn btn-outline-success btn-sm" href="{{ url_for('concluir_tarefa',id=tarefa.id) }}">Concluir</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+,
